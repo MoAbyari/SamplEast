@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  BPM: 1.5
+  musicalkey: MyText
+  instrument_id: 1
+  artist_id: 1
+
+two:
+  name: MyText
+  BPM: 1.5
+  musicalkey: MyText
+  instrument_id: 1
+  artist_id: 1
