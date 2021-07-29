@@ -1,0 +1,13 @@
+<h1><%= @artist.name %></h1>
+
+<p> Country: <%= @artist.country %> </p>
+<p> ID: <%= @artist.id %> </p>
+
+ <%= image_tag @artist.image, :class => "feature" if @artist.image.present? %>
+
+
+
+ <div class = "controls">
+   <%= link_to 'Edit', edit_artist_path(@artist.id)%>
+   <%= link_to 'Delete', @artist, :method => 'delete', :data => {:confirm => 'Good artists never die'}%>
+ </div>

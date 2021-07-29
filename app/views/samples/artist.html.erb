@@ -1,0 +1,19 @@
+<h1> Artists </h1>
+
+<% @artists.each do |artist| %>
+<% if artist.image.present? %>
+  <%= link_to image_tag(artist.image, :class => "thumb"), artsample_path(artist.name)%>
+<% end %>
+
+<p>
+  <% artist.image %>
+  | Name: <%= artist.name %>
+  | Country: <%= artist.country %>
+  | Instruments:
+    <% artist.instruments.each do |instrument| %>
+     <%= link_to instrument.name, instsample_path(instrument.name) %>,
+    <% end %>
+
+</p>
+
+<% end %>

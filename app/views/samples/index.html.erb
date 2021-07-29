@@ -1,0 +1,27 @@
+<h1>All Samples</h1>
+
+<h3> Search </h3>
+<%= form_tag samples_path, :method => 'get' do %>
+<%= text_field_tag :search, params[:search] %>
+<%= submit_tag ("search"), :name => nil %>
+<% end %>
+
+<% @samples.each do |sample| %>
+
+  <div>
+    <p>
+        Name: <%= sample.name %> |
+        BPM: <%= sample.BPM %> |
+        Key: <%= sample.musicalkey %> |
+        <% if sample.instrument_id.present? %>
+        Instrument: <%= sample.instrument.name %>
+        <% end %>
+        <% if sample.artist_id.present? %>
+        | Artist: <%= sample.artist.name %>
+        <% end %>
+
+       <audio controls="controls" src="/assets/<%=sample.name%>.wav"></audio>
+    </p>
+  </div>
+
+<% end %>

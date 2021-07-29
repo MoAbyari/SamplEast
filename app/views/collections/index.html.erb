@@ -1,0 +1,12 @@
+<h1>All Samples</h1>
+
+<% @samples.each do |sample| %>
+  <ul>
+    <li>Name: <%= link_to sample.name, collection_path(sample.id)%> </li>
+    <li>Key: <%= sample.musicalkey %></li>
+    <% if sample.BPM.present? %>
+    <li>BPM: <%= sample.BPM %></li>
+    <% end %>
+  </ul>
+
+<% end %>

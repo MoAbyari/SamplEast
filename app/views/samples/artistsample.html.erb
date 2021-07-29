@@ -1,0 +1,28 @@
+<div>
+  <%= image_tag @artist.image  %>
+</div>
+<div>
+  Name: <%= @artist.name %>
+  Country:<%= @artist.country %>
+</div>
+<h2>
+  Samples From: <%= @artist.name %>
+</h2>
+
+<% @samples.each do |sample| %>
+
+   <div>
+
+     <ul>
+       <li>
+
+       <strong>Sample Name:</strong><%= sample.name %> </li>
+       <li><strong>Key:</strong><%= sample.musicalkey %></li>
+       <li><strong>BPM:</strong><%= sample.BPM %></li>
+     </ul>
+   </div>
+   <div>
+       <audio controls="controls" src="/assets/<%=sample.name%>.wav"></audio>
+    </div>
+
+<% end %>

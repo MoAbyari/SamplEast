@@ -1,0 +1,14 @@
+<h1>All Instruments</h1>
+
+<% @instruments.each do |instrument| %>
+  <%= image_tag instrument.image, :class => 'thumb' if instrument.image.present?  %>
+
+  <ul>
+    <li>Name: <%= link_to instrument.name, instrument %> </li>
+    <li>family: <%= instrument.family %></li>
+    <% if instrument.country.present? %>
+    <li>Country: <%= instrument.country %></li>
+    <% end %>
+  </ul>
+
+<% end %>

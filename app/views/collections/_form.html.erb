@@ -1,0 +1,24 @@
+<%= form_for @sample, :url => collections_path do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, :required => true %>
+
+  <%= f.label :BPM %>
+  <%= f.text_field :BPM %>
+
+  <%= f.label :musicalkey %>
+  <%= f.text_field :musicalkey %>
+
+  <%= f.label :artist_id %>
+  <%= f.number_field :artist_id %>
+
+  <%= f.label :instrument_id %>
+  <%= f.number_field :instrument_id %>
+
+  <%= f.label :artist_id %>
+  <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true  %>
+
+  <%= f.label :instrument_id %>
+  <%= f.select :instrument_id, Instrument.pluck(:name, :id), :include_blank => true  %>
+
+  <%= f.submit %>
+<% end %>

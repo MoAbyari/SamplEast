@@ -1,0 +1,10 @@
+<h1><%= @sample.name %></h1>
+
+<p> Family: <%= @sample.BPM %> </p>
+<p> Country: <%= @sample.musicalkey %> </p>
+
+
+ <div class = "controls">
+   <%= link_to 'Edit', edit_collection_path(@sample.id)%>
+  <%= link_to 'Delete', collection_path(@sample.id), :method => 'delete', :data => {:confirm => 'Are you sure ?'}%>
+ </div>
