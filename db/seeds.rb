@@ -21,8 +21,8 @@ i5= Instrument.create(:name => 'Tar', :family => 'strings', :country => 'Iran')
 puts "#{ Instrument.count } instruments created."
 
 User.destroy_all
-u1 =User.create :name => 'Mo Abyari', :email => 'm67.abyari@gmail.com'
-u2 =User.create :name => 'Mai', :email => 'mai@ga.co', :admin => true
+u1 =User.create :name => 'Mo Abyari', :email => 'm67.abyari@gmail.com', :password => 'chicken'
+u2 =User.create :name => 'Mai', :email => 'mai@ga.co', :admin => true, :password => 'chicken'
 puts " #{User.count } users created"
 
 Soundbag.destroy_all
