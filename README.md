@@ -1,24 +1,32 @@
-# README
+## Project Title : SamplEast
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+### Current Version
 
-* Ruby version
+v.01
 
-* System dependencies
 
-* Configuration
+### Description
 
-* Database creation
+SamplEast is where you can access unlimited musical samples and loops from eastern ancient. It will be continuously improved in the near future. Please signup to download loops and samples, and get access to instruments and artists bio.
 
-* Database initialization
 
-* How to run the test suite
+### Executing
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Please go to the link https://sampleast.herokuapp.com/
+2. Sing up or login to access the main content.
 
-* Deployment instructions
 
-* ...
+
+### Future Continuous Improvement
+
+1. V.02
+
+* Adopting AWS.
+* Adding stripe API for payment gateway.
+* Adding artists account so that they can create profile and share their work.
+
+
+## Author
+
+* **Mo Abyari** https://github.com/MoAbyari
