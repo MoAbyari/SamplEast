@@ -9,12 +9,6 @@
   <%= f.text_field :musicalkey %>
 
   <%= f.label :artist_id %>
-  <%= f.number_field :artist_id %>
-
-  <%= f.label :instrument_id %>
-  <%= f.number_field :instrument_id %>
-
-  <%= f.label :artist_id %>
   <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true  %>
 
   <%= f.label :instrument_id %>

@@ -10,7 +10,7 @@
   id: <%= @instrument.id %>
 </p>
 
- <%= image_tag @instrument.image, :class => "feature" if @instrument.image.present? %>
+ <%= image_tag @instrument.image, :class => "thumbnail" if @instrument.image.present? %>
 
  <div class = "controls">
    <%= link_to 'Edit', edit_instrument_path(@instrument.id)%>

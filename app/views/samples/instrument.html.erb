@@ -1,14 +1,28 @@
-<h1> Instruments </h1>
 
-<% @instruments.each do |instrument| %>
-<% if instrument.image.present? %>
-  <%=link_to image_tag(instrument.image, :class => "feature"), instsample_path(instrument.name)%>
-<% end %>
-  <div>
-     <p>
-       | Name: <%= instrument.name%>
-       | Family: <%= instrument.family %>
-       | Country: <%= instrument.country %>
-     </p>
+<br><h2>  Instruments </h2><br>
+
+
+<div class="container" style="background-color: #00000008;">
+  <div class="row">
+    <% @instruments.each do |instrument| %>
+    <div class="col-4">
+      <% if instrument.image.present? %>
+        <%=link_to image_tag(instrument.image, :class => "thumbnail"), instsample_path(instrument.name)%>
+      <% end %>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-1"></div>
+      <div class="col-4"> <br><br>
+        <strong>Name:</strong> <%= instrument.name%> <br>
+        <strong>Family:</strong> <%= instrument.family %> <br>
+        <strong>Country:</strong> <%= instrument.country %> <br>
+
+        <p>
+          <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et possimus eligendi vero tempore minima, velit, ratione unde perferendis nulla quasi accusantium architecto cupiditate dolore sunt, porro accusamus nesciunt voluptatem magnam.
+        </p>
+
+      </div>
+    <div class="col-1"></div>
+    <% end %>
   </div>
-<% end %>
+</div>

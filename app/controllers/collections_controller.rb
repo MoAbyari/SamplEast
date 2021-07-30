@@ -1,5 +1,6 @@
 class CollectionsController < ApplicationController
-
+  before_action :check_for_login
+  
   def index
     @samples = Sample.all
   end

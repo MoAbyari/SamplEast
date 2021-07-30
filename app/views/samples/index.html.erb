@@ -1,27 +1,57 @@
-<h1>All Samples</h1>
+<br>
 
-<h3> Search </h3>
-<%= form_tag samples_path, :method => 'get' do %>
-<%= text_field_tag :search, params[:search] %>
-<%= submit_tag ("search"), :name => nil %>
-<% end %>
+<div class="row">
+    <div class="col-8">
+      <h2>All Samples</h2>
+    </div>
+    <div class="col-1">
 
-<% @samples.each do |sample| %>
-
-  <div>
-    <p>
-        Name: <%= sample.name %> |
-        BPM: <%= sample.BPM %> |
-        Key: <%= sample.musicalkey %> |
-        <% if sample.instrument_id.present? %>
-        Instrument: <%= sample.instrument.name %>
-        <% end %>
-        <% if sample.artist_id.present? %>
-        | Artist: <%= sample.artist.name %>
-        <% end %>
-
-       <audio controls="controls" src="/assets/<%=sample.name%>.wav"></audio>
-    </p>
+    </div>
+    <div class="col-3">
+      <%= form_tag samples_path, :method => 'get' do %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag ("search"), :name => nil %>
+      <% end %>
+    </div>
   </div>
 
-<% end %>
+<br>
+
+
+<div class="container" style="background-color: #00000052;">
+  <br>
+  <div class="row">
+    <div class="col-2"><strong>Name</strong></div>
+    <div class="col-2"><strong>Instrument</strong></div>
+    <div class="col-2"><strong>Artist</strong></div>
+    <div class="col-1"><strong>Key</strong></div>
+    <div class="col-1"><strong>BPM</strong></div>
+    <div class="col-3"><strong>Audio</strong></div>
+  </div>
+  <br>
+
+</div>
+<br>
+
+<div class="container">
+  <div class="row">
+    <% @samples.each do |sample| %>
+    <div class="col-2"><%= sample.name %></div>
+    <div class="col-2">
+      <% if sample.instrument_id.present? %>
+      <%= sample.instrument.name %>
+      <% end %>
+    </div>
+    <div class="col-2">
+      <% if sample.artist_id.present? %>
+      <%= sample.artist.name %>
+      <% end %>
+    </div>
+    <div class="col-1"><%= sample.musicalkey %></div>
+    <div class="col-1"><%= sample.BPM %></div>
+    <div class="col-4">
+      <audio controls="controls" src="/assets/<%=sample.name%>.wav"></audio>
+    </div>
+    <% end %>
+  </div>
+</div>

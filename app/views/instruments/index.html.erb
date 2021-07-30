@@ -1,7 +1,7 @@
 <h1>All Instruments</h1>
 
 <% @instruments.each do |instrument| %>
-  <%= image_tag instrument.image, :class => 'thumb' if instrument.image.present?  %>
+  <%= image_tag instrument.image, :class => "thumbnail" if instrument.image.present?  %>
 
   <ul>
     <li>Name: <%= link_to instrument.name, instrument %> </li>

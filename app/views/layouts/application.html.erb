@@ -4,38 +4,60 @@
     <title>Sampleast</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-   <div class = 'nav'>
-     <nav>
-       <%= link_to "Home", root_path %>
-       <% if @current_user.present? %>
-         <% if @current_user.admin? %>
-         ||<%= link_to "Admin*New*Artist", new_artist_path %>
-         ||<%= link_to "Admin*Artists", artists_path%>
-         ||<%= link_to "Admin*New*Instrument", new_instrument_path %>
-         ||<%= link_to "Admin*Instruments", instruments_path%>|
-         ||<%= link_to "Admin*New*Sample", new_collection_path %>
-         ||<%= link_to "Admin*Samples", collections_path%>|
-         <% end %>
-         | <%= link_to "Samples ", samples_path %>
-         | <%= link_to "Instruments ", samples_instruments_path %>
-         | <%= link_to "Artists ", samples_artists_path %>
-         | <%= link_to "Log out #{@current_user.email}", login_path, :method => 'delete'%>
-
-
-       <% else %>
-        | <%= link_to "About SamplEast", home_about_path %>
-         | <%= link_to "Sign up", new_user_path %>
-         | <%= link_to "Log in", login_path %>
-       <% end %>
-     </nav>
-   </div>
    <div class= "container">
+     <nav class="navbar navbar-expand-lg" style="background-color: #00000052;">
+       <a class="navbar-brand"> <strong>SamplEast</strong></a>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+           <li class="nav-item">
+             <%= link_to " Home", root_path %>
+           </li>
+           <% if @current_user.present? %>
+             <% if @current_user.admin? %>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                | Admin
+                </a>
+
+                <div class="dropdown-menu" >
+                  <%= link_to "New Artist", new_artist_path %>
+                  <div class="dropdown-divider"></div>
+                  <%= link_to "All Artists", artists_path%>
+                    <div class="dropdown-divider"></div>
+                  <%= link_to "New Instrument", new_instrument_path %>
+                    <div class="dropdown-divider"></div>
+                  <%= link_to "All Instrument", instruments_path%>
+                    <div class="dropdown-divider"></div>
+                  <%= link_to "New Sample", new_collection_path %>
+                  <div class="dropdown-divider"></div>
+                  <%= link_to "All Samples", collections_path %>
+                </div>
+              </li>
+            <% end %>
+
+             <li class="nav-item">
+               | <%= link_to "Samples ", samples_path %>
+               | <%= link_to "Instruments ", samples_instruments_path %>
+               | <%= link_to "Artists ", samples_artists_path %>
+               | <%= link_to "Log out #{@current_user.email}", login_path, :method => 'delete'%>
+             </li>
+         <% else %>
+
+            <li class="nav-item">
+               | <%= link_to "About Us", home_about_path %>
+               | <%= link_to "Sign up", new_user_path %>
+               | <%= link_to "Log in", login_path %>
+            </li>
+         <% end %>
+         </ul>
+       </div>
+     </nav>
         <%= yield %>
    </div>
 

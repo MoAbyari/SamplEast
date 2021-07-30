@@ -1,4 +1,6 @@
 class SamplesController < ApplicationController
+  before_action :check_for_login
+
 
   def index
     @samples = Sample.all
@@ -35,4 +37,5 @@ class SamplesController < ApplicationController
   def search_result
     params.require(:sample).permit(:name, :country, :musicalkey, :family, :search)
   end
+
 end

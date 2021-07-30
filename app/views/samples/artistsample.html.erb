@@ -1,28 +1,34 @@
-<div>
-  <%= image_tag @artist.image  %>
-</div>
-<div>
-  Name: <%= @artist.name %>
-  Country:<%= @artist.country %>
-</div>
-<h2>
-  Samples From: <%= @artist.name %>
-</h2>
 
-<% @samples.each do |sample| %>
+<br><br>
+<div class="container" style="background-color: #00000052;">
+  <br><h2> <%= @artist.name %> </h2>
+  <br>
+  <div class="row">
 
-   <div>
+    <div class="col-1"></div>
+    <div class="col-4">
+      <%= image_tag @artist.image, :class=> "thumbnail"  %>
 
-     <ul>
-       <li>
-
-       <strong>Sample Name:</strong><%= sample.name %> </li>
-       <li><strong>Key:</strong><%= sample.musicalkey %></li>
-       <li><strong>BPM:</strong><%= sample.BPM %></li>
-     </ul>
-   </div>
-   <div>
-       <audio controls="controls" src="/assets/<%=sample.name%>.wav"></audio>
     </div>
+    <div class="col-1"></div>
+    <div class="col-1"></div>
+    <div class="col-4">
+      <% @samples.each do |sample| %>
+        <div>
+         <ul>
+           <li>
+            <strong>Sample Name:</strong><%= sample.name %> </li>
+            <li><strong>Key:</strong><%= sample.musicalkey %></li>
+            <li><strong>BPM:</strong><%= sample.BPM %></li>
+         </ul>
 
-<% end %>
+         </div>
+         <div>
+             <audio controls="controls" src="/assets/<%=sample.name%>.wav"></audio>
+          </div>
+      <% end %>
+    </div>
+    <div class="col-1"></div>
+  </div>
+  <br>
+</div>
