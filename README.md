@@ -8,7 +8,9 @@ v.01
 
 ## Description
 
-SamplEast is where you can access unlimited musical samples and loops from eastern ancient. It will be continuously improved in the near future. Please signup to download loops and samples, and get access to instruments and artists bio.
+SamplEast is a music store where you can access unlimited musical samples and loops from eastern ancient. It will be continuously improved in the near future. Please signup to download loops and samples, and get access to instruments and artists bio. 
+
+This web app is built using Ruby version 2.7.4 and Rails version 5.2.6. SamplEast app has four models: user, sample, instrument and artist.
 
 
 ## Executing
