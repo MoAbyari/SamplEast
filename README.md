@@ -15,7 +15,6 @@ SamplEast is where you can access unlimited musical samples and loops from easte
 
 1. Please go to the link https://sampleast.herokuapp.com/
 2. Sign up or login to access the main content.
-3. User 
 
 
 ## Approach
