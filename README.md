@@ -1,17 +1,17 @@
-## Project Title : SamplEast
+# Project Title : SamplEast
 
 
-### Current Version
+## Current Version
 
 v.01
 
 
-### Description
+## Description
 
 SamplEast is where you can access unlimited musical samples and loops from eastern ancient. It will be continuously improved in the near future. Please signup to download loops and samples, and get access to instruments and artists bio.
 
 
-### Executing
+## Executing
 
 1. Please go to the link https://sampleast.herokuapp.com/
 2. Sign up or login to access the main content.
@@ -30,7 +30,7 @@ Simple search function was added to search for samples based on musical key, ins
 Tests were run multiple times as a visitors, an user and admin to fix bugs and make sure the web is working probably.
 
 
-### Future Continuous Improvement
+## Future Continuous Improvement
 
 1. V.02
 
