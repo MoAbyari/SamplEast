@@ -17,14 +17,36 @@
  body {
    background-color: #2a2e31;
    color: white;
-
  }
+
+.navbar{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  background-color: #191919;
+}
+
+.nav-item > a {
+  color:white;
+  align-self: flex-end;
+}
+
+.imgcontainer {
+  margin: 0 auto;
+  background-image: url("/assets/SEbackground.png");
+  
+} 
+
+.img img{
+ width: 100%;
+ display: flex;
+}
 
 .thumbnail{
   max-width: 400px;
   max-height: 400px;
-  min-width: 400px;
-  min-height: 400px;
+  /* min-width: 400px;
+  min-height: 400px; */
 }
 
 .homeimage{
@@ -32,4 +54,9 @@
   max-height: 100%;
   display: block;
 
+}
+
+.try{
+  display: flex;
+  flex-direction: row;
 }
