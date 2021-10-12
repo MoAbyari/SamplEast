@@ -45,8 +45,8 @@
 .thumbnail{
   max-width: 400px;
   max-height: 400px;
-  /* min-width: 400px;
-  min-height: 400px; */
+  min-width: 400px;
+  min-height: 400px;
 }
 
 .homeimage{
@@ -60,3 +60,124 @@
   display: flex;
   flex-direction: row;
 }
+
+/* ///////////////////  Instruments View Page   ///////////////////   */
+.instruments-container {
+  background-color: #00000008;
+  max-width: 1140px;
+  margin-top: 40px;
+}
+
+.instruments-container h2 {
+  margin-left: 30px;
+}
+
+.instrument-container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  margin: 25px 0 25px 0;
+  background-color: #00000052;
+  color: #ffffffc9;
+  border-radius: 15px;
+}
+
+
+.instrument-info-container {
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+.instrument-img {
+  flex:1;
+}
+
+.instrument-info span {
+ color: #c3925e;
+ font-weight: 600;
+}
+
+
+/* ///////////////////  Instrument Samples View Page   ///////////////////   */
+.instrument-samples-container {
+  background-color: #00000008;
+  max-width: 1140px;
+  margin-top: 40px;
+}
+
+.instruments-container h2 {
+  margin-left: 30px;
+}
+
+.instrument-sample-container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  margin: 25px 0 25px 0;
+  background-color: #00000052;
+  color: #ffffffc9;
+  border-radius: 15px;
+}
+
+
+.instrument-sample-info-container {
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+.instrument-img {
+  flex:1;
+}
+
+.sample-info span {
+ color: #c3925e;
+ font-weight: 600;
+}
+
+/* ///////////////////  Artists View Page   ///////////////////   */
+.artists-container {
+  background-color: #00000008;
+  max-width: 1140px;
+  margin-top: 40px;
+}
+
+.artists-container h2 {
+  margin-left: 30px;
+}
+
+.artist-container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  margin: 25px 0 25px 0;
+  background-color: #00000052;
+  color: #ffffffc9;
+  border-radius: 15px;
+}
+
+
+.artist-info-container {
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+.artist-img {
+  flex: 1;
+}
+
+.artist-info span {
+ color: #c3925e;
+ font-weight: 600;
+}
+
+
+

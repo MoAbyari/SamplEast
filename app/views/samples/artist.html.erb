@@ -1,34 +1,26 @@
-<br><h2 class="text-center"> Artists </h2><br>
-
-
-<div class="container" style="background-color: #00000052;">
-  <div class="row">
-    <% @artists.each do |artist| %>
-
-    <div class="col-1"></div>
-    <div class="col-4">
-      <% if artist.image.present? %>
-        <%= link_to image_tag(artist.image, :class => "thumbnail"), artsample_path(artist.name)%>
-      <% end %>
-    </div>
-    <div class="col-1"></div>
-    <div class="col-1"></div>
-      <div class="col-4"> <br><br>
-        <strong>Name:</strong> <%= artist.name %> <br>
-        <strong>Country:</strong> <%= artist.country %> <br>
-        <strong>Instruments:</strong>
-
-        <% artist.instruments.each do |instrument| %>
-           <%= link_to instrument.name, instsample_path(instrument.name) %>
-        <% end %>
-
-        <p>
-          <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et possimus eligendi vero tempore minima, velit, ratione unde perferendis nulla quasi accusantium architecto cupiditate dolore sunt, porro accusamus nesciunt voluptatem magnam.
-        </p>
-
+<div class="artists-container">
+  <h1> Artists </h1>
+   <% @artists.each do |artist| %>
+    <div class= "artist-container"> 
+     <% if artist.image.present? %>
+      <div class= "artist-img"> 
+          <%= link_to image_tag(artist.image, :class => "thumbnail"), artsample_path(artist.name)%>
       </div>
-    <div class="col-1"></div>
-    <% end %>
-
-  </div>
+      <% end %>
+      <div class= "artist-info-container"> 
+        <div class= "artist-info">
+          <span>Name:</span> <%= artist.name %> <br>
+          <span>Country:</span> <%= artist.country %> <br>
+          <span>Instruments:</span> 
+            <% artist.instruments.each do |instrument| %>
+               <%= link_to instrument.name, instsample_path(instrument.name) %>
+            <% end %>
+        </div>
+        <div class= "artist-description">
+          <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et possimus eligendi vero tempore minima, velit, ratione unde perferendis nulla quasi accusantium architecto cupiditate dolore sunt, porro accusamus nesciunt voluptatem magnam.
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
+
