@@ -56,6 +56,10 @@
 
 }
 
+.login-container {
+  margin-top: 40px;
+}
+
 .try{
   display: flex;
   flex-direction: row;

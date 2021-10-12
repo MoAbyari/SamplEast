@@ -1,37 +1,39 @@
-<h1>CREATE A NEW SAMPLEAST ACCOUNT</h1>
-
-<% if @user.errors.any? %>
-  <ul>
-    <% @user.errors.full_messages.each do |er| %>
-     <li>
-       <%= er %>
-     </li>
-     <% end %>
-  </ul>
-<% end %>
-
-<%= form_for @user do |f| %>
-  <div class="form-group" >
-      <%= f.label :name %>
-      <%= f.text_field :name, :required => true, :class=> "form-control" %>
-  </div>
-
-  <div class="form-group" >
-    <%= f.label :email %>
-    <%= f.email_field :email, :class=> "form-control" %>
-  </div>
-
-  <div class="form-group" >
-    <%=f.label :password %>
-    <%=f.password_field :password, :required =>true, :class=> "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%=f.label :password_confirmation %>
-    <%=f.password_field :password_confirmation, :required =>true, :class=> "form-control" %>
-  </div>
-
-<%= f.submit "Create", :class => "btn btn-dark btn-lg btn-block" %>
+<div class="login-container"> 
+  <h1>CREATE A NEW SAMPLEAST ACCOUNT</h1>
+  
+  <% if @user.errors.any? %>
+    <ul>
+      <% @user.errors.full_messages.each do |er| %>
+       <li>
+         <%= er %>
+       </li>
+       <% end %>
+    </ul>
   <% end %>
-
-  Have an acount? <%=link_to "SIGN IN HERE", login_path  %>
+  
+  <%= form_for @user do |f| %>
+    <div class="form-group" >
+        <%= f.label :name %>
+        <%= f.text_field :name, :required => true, :class=> "form-control" %>
+    </div>
+  
+    <div class="form-group" >
+      <%= f.label :email %>
+      <%= f.email_field :email, :class=> "form-control" %>
+    </div>
+  
+    <div class="form-group" >
+      <%=f.label :password %>
+      <%=f.password_field :password, :required =>true, :class=> "form-control" %>
+    </div>
+  
+    <div class="form-group">
+      <%=f.label :password_confirmation %>
+      <%=f.password_field :password_confirmation, :required =>true, :class=> "form-control" %>
+    </div>
+  
+  <%= f.submit "Create", :class => "btn btn-dark btn-lg btn-block" %>
+    <% end %>
+  
+    Have an acount? <%=link_to "SIGN IN HERE", login_path  %>
+</div>
