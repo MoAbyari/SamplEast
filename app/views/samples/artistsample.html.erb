@@ -1,34 +1,33 @@
-
-<br><br>
-<div class="container" style="background-color: #00000052;">
-  <br><h2> <%= @artist.name %> </h2>
-  <br>
-  <div class="row">
-
-    <div class="col-1"></div>
-    <div class="col-4">
-      <%= image_tag @artist.image, :class=> "thumbnail"  %>
-
-    </div>
-    <div class="col-1"></div>
-    <div class="col-1"></div>
-    <div class="col-4">
-      <% @samples.each do |sample| %>
-        <div>
-         <ul>
-           <li>
-            <strong>Sample Name:</strong><%= sample.name %> </li>
-            <li><strong>Key:</strong><%= sample.musicalkey %></li>
-            <li><strong>BPM:</strong><%= sample.BPM %></li>
-         </ul>
-
-         </div>
-         <div>
-             <audio controls="controls" src="/assets/<%=sample.name%>.wav"></audio>
-          </div>
+<div class="artist-samples-container">
+  <h2> <%= @artist.name %> </h2>
+    <div class= "artist-sample-container"> 
+    <h2> <%= @artist.name %> </h2>
+     <% if @artist.image.present? %>
+      <div class= "artist-img"> 
+         <%= image_tag @artist.image, :class=> "thumbnail"  %>
+      </div>
       <% end %>
+      <div class= "artist-sample-info-container"> 
+        <% @samples.each do |sample| %>
+          <div class= "sample-info-container">
+            <div class="sample-info">
+              <ul>
+                <li>
+                  <span> Sample Name: </span> <%= sample.name %>
+                </li>
+                <li>
+                  <span> Key: </span> <%= sample.musicalkey %>
+                </li>
+                <li>
+                  <span> BPM: </span> <%= sample.BPM %> 
+                </li>
+              </ul>
+            </div>
+            <div>
+                <audio controls="controls" src="/assets/<%=sample.name%>.wav"></audio>
+            </div>
+          </div>
+        <% end %>  
+      </div>
     </div>
-    <div class="col-1"></div>
-  </div>
-  <br>
 </div>
