@@ -1,7 +1,6 @@
 <div class="artist-samples-container">
   <h2> <%= @artist.name %> </h2>
     <div class= "artist-sample-container"> 
-    <h2> <%= @artist.name %> </h2>
      <% if @artist.image.present? %>
       <div class= "artist-img"> 
          <%= image_tag @artist.image, :class=> "thumbnail"  %>
