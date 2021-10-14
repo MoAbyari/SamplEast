@@ -110,6 +110,68 @@
   flex-direction: row;
 }
 
+/* ///////////////////  Samples View Page   ///////////////////   */
+.samples-container{
+  background-color: #00000008;
+  max-width: 1140px;
+  margin-top: 40px;
+}
+
+.sample-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15px 0;
+  padding: 10px 5px;
+}
+.sample-name {
+  flex: 2;
+}
+.instrument-name {
+  flex: 2;
+}
+.artist-name{
+  flex:2;
+}
+.key{
+  flex:1;
+}
+.bpm{
+  flex:1;
+}
+.audio{
+  flex:4;
+}
+
+/* ///////////////////  Samples View Page / sample container   ///////////////////   */
+
+.sample-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #00000008;
+  margin: 15px 0;
+  padding: 5px;
+}
+.sml-name {
+  flex: 2;
+}
+.ins-name {
+  flex: 2;
+}
+.art-name{
+  flex:2;
+}
+.sml-key{
+  flex:1;
+}
+.sml-bpm{
+  flex:1;
+}
+.sml-audio{
+  flex:4;
+}
+
 /* ///////////////////  Instruments View Page   ///////////////////   */
 .instruments-container {
   background-color: #00000008;
