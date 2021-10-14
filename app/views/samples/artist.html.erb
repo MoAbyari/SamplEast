@@ -4,7 +4,7 @@
     <div class= "artist-container"> 
      <% if artist.image.present? %>
       <div class= "artist-img"> 
-          <%= link_to image_tag(artist.image, :class => "thumbnail"), artsample_path(artist.name)%>
+          <%= link_to image_tag(artist.image, :class => "thumbnail-img"), artsample_path(artist.name)%>
       </div>
       <% end %>
       <div class= "artist-info-container"> 

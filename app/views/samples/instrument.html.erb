@@ -5,7 +5,7 @@
     <div class= "instrument-container"> 
     <% if instrument.image.present? %>
       <div class= "instrument-img"> 
-          <%=link_to image_tag(instrument.image, :class => "thumbnail"), instsample_path(instrument.name)%>
+          <%=link_to image_tag(instrument.image, :class => "thumbnail-img"), instsample_path(instrument.name)%>
       </div>
       <% end %>
       <div class= "instrument-info-container"> 
