@@ -63,7 +63,7 @@
 }
 
 .audio-container{
-  height: 29px;
+  height: 30px;
 }
 
 .homeimage{
@@ -121,8 +121,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 15px 0;
-  padding: 10px 5px;
+  font-size: 19px;
+  margin: 15px 0;
+  padding: 15px 20px;
+  color: #ffffffcc;
 }
 .sample-name {
   flex: 2;
@@ -151,7 +153,9 @@
   align-items: center;
   background-color: #00000008;
   margin: 15px 0;
-  padding: 5px;
+  padding: 15px 20px;
+  font-weight: 300;
+  color: #f1efeff7;
 }
 .sml-name {
   flex: 2;
