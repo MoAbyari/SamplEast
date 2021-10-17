@@ -26,9 +26,26 @@
   background-color: #191919;
 }
 
+.dropdown-menu {
+  font-size: 12px;
+  margin-left: 20px;
+  padding: 10px 20px;
+}
+
+@media only screen and (max-width: 769px) {
+  .navbar{
+    font-size: 12px;
+    color: darkgoldenrod;
+  }
+}
+
 .nav-item > a {
-  color:white;
+  color:rgba(255, 255, 255, 0.829);
   align-self: flex-end;
+}
+
+.nav-item > a:hover {
+  color:darkgoldenrod;
 }
 
 .imgcontainer {
@@ -114,7 +131,7 @@
 .samples-container{
   background-color: #00000008;
   max-width: 1140px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .sample-header{
@@ -122,8 +139,8 @@
   flex-direction: row;
   align-items: center;
   font-size: 19px;
-  margin: 15px 0;
   padding: 15px 20px;
+  background-color:#00000052;
   color: #ffffffcc;
 }
 .sample-name {
@@ -177,6 +194,12 @@
 }
 
 /* ///////////////////  Instruments View Page   ///////////////////   */
+.search {
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .instruments-container {
   background-color: #00000008;
   max-width: 1140px;
@@ -202,7 +225,6 @@
   background-color: #1111112a;
   color: #ffffffc9;
 }
-
 
 .instrument-info-container {
   display: flex;
@@ -293,7 +315,6 @@
   background-color: #1111112a;
   color: #ffffffc9;
 }
-
 
 .artist-info-container {
   display: flex;

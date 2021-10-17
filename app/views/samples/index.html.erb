@@ -1,23 +1,12 @@
-<br>
 
-<div class="row">
-    <div class="col-8">
-      <h2>All Samples</h2>
-    </div>
-    <div class="col-1">
+<div class="search">
+  <%= form_tag samples_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag ("search"), :name => nil %>
+  <% end %>
+</div>
 
-    </div>
-    <div class="col-3">
-      <%= form_tag samples_path, :method => 'get' do %>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag ("search"), :name => nil %>
-      <% end %>
-    </div>
-  </div>
-
-<br>
-
-<div class="sample-header" style="background-color: #00000052;">
+<div class="sample-header">
     <div class="sample-name"><strong>Name</strong> </div>
     <div class="instrument-name"><strong>Instrument</strong></div>
     <div class="artist-name"><strong>Artist</strong></div>
@@ -25,7 +14,6 @@
     <div class="bpm"><strong>BPM</strong></div>
     <div class="audio"><strong>Audio</strong></div>
 </div>
-
 
 <div class="samples-container">
   <% @samples.each do |sample| %>
@@ -54,4 +42,5 @@
         </div>
     </div>
   <% end %>
+
 </div>
